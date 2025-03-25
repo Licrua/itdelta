@@ -1,0 +1,90 @@
+@import '@styles/variables.scss';
+
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  .picture {
+    position: absolute;
+    top: 0;
+    height: 60%;
+    width: 100%;
+    max-width: 1920px;
+
+    background-size: cover;
+  }
+
+  .bio {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    gap: 10px;
+
+    .info {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      .buttons {
+        display: flex;
+        gap: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .header {
+    .picture {
+      height: 75%;
+    }
+    .bio {
+      width: 85%;
+      height: 25%;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    min-height: 192px;
+    height: 30vh;
+
+    .bio {
+      width: 75%;
+      padding: 0 32px;
+      gap: 20px;
+      position: static;
+      top: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: end;
+
+      .info {
+        .buttons {
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .header {
+    h1 {
+      font-size: 48px;
+    }
+  }
+}

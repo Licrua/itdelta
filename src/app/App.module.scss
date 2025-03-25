@@ -1,0 +1,54 @@
+@import '@styles/variables.scss';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+h1 {
+  @include adaptiv-font(32, 14);
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  @include adaptiv-font(14, 12);
+}
+button:focus,
+button:active {
+  outline: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  background-color: $color-white-background;
+  color: $color-black;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+
+  #root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
