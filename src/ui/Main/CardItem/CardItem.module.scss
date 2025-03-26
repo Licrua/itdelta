@@ -40,14 +40,17 @@
   }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1920px) {
   .cardItem {
     gap: 12px;
     font-size: 32px;
 
     img {
-      height: 270px;
+      object-fit: cover;
       border-radius: 12px;
     }
   }
+}
+.cardDescription {
+  margin-top: 8px;
 }

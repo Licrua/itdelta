@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './CardItem.module.scss';
 
 interface CardItemProps {
@@ -10,8 +9,15 @@ interface CardItemProps {
 const CardItem = ({ id, url, onPhotoClick }: CardItemProps) => {
   return (
     <figure className={classes.cardItem}>
-      <img src={url} alt={`Img ${id}`} onClick={() => onPhotoClick(id, url)} />
-      <p>id: {id}</p>
+      <img
+        loading="lazy"
+		width={431}
+		height={216}
+        src={url}
+        alt={`Img ${id}`}
+        onClick={() => onPhotoClick(id, url)}
+      />
+      <figcaption className={classes.cardDescription}>id: {id}</figcaption>
     </figure>
   );
 };

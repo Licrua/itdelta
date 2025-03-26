@@ -1,15 +1,16 @@
 import classes from './Header.module.scss';
 import Avatar from './Avatar/Avatar.tsx';
 import CustomButton from '../CustomButton/CustomButton.tsx';
-import { Message, Call } from '../../shared/svg.module.tsx';
+import { Message, Call } from '../../assets/icons/svg.module.tsx';
+import avatar from '@assets/icons/avatar.jpg';
 const imageUrl = `${process.env.PUBLIC_URL}/images/banner_image.png`;
+
 
 interface HeaderProps {
   name: string;
 }
 
 const Header = ({ name }: HeaderProps) => {
-  const avatar = require('./Avatar/avatar.jpg');
   const openLink = (to: string): void => {
     window.open(to, '_blank');
   };
@@ -32,12 +33,12 @@ const Header = ({ name }: HeaderProps) => {
             <CustomButton
               svg={<Message />}
               text={'Message'}
-              onClick={() => openLink('mailto:ex@mail.com')}
+              onClick={() => openLink('mailto:example@mail.com')}
             />
             <CustomButton
               svg={<Call />}
               text={'Call'}
-              onClick={() => openLink('tel:89998880909')}
+              onClick={() => openLink('tel:89451455443')}
             />
           </div>
         </div>

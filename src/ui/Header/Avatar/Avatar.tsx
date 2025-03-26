@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './Avatar.module.scss';
 
 interface AvatarProps {
@@ -8,7 +7,7 @@ interface AvatarProps {
 const Avatar = ({ image }: AvatarProps) => {
   return (
     <div className={classes.avatar}>
-      <img src={image} alt="avatar" />
+      <img src={image} width={128} height={128} alt="avatar" />
     </div>
   );
 };

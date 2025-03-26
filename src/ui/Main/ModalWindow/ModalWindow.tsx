@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './ModalWindow.module.scss';
 import CustomButton from '../../CustomButton/CustomButton.tsx';
-import useFetchData from '../../../API/useFetchData.tsx';
+import useFetchData from '../../../hooks/useFetchData.tsx';
 import CommentList from '../CommentList/CommentList.tsx';
 import Loader from '../../Loader/Loader.tsx';
 
@@ -35,7 +35,7 @@ const ModalWindow = ({ id, show, handleClose }: ModalWindowProps) => {
       onClick={handleClose}
     >
       <div className={classes.content} onClick={(e) => e.stopPropagation()}>
-        <img src={data?.image} alt={`img ${id}`} />
+        <img src={data?.image} loading="lazy" alt={`img ${id}`} />
         <form action="">
           <label htmlFor="comment">Comment</label>
           <textarea name="comment" id="comment"></textarea>

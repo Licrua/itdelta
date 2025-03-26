@@ -1,13 +1,10 @@
 @import '@styles/variables.scss';
+
 .avatar {
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 75px;
-  max-height: 110px;
-  min-width: 75px;
-  max-width: 110px;
   border-radius: 50%;
   background-color: white;
   box-sizing: border-box;
@@ -15,16 +12,7 @@
   margin-bottom: 4px;
 
   img {
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
-    position: static;
   }
 }
 
-@media screen and (min-width: 2000px) {
-  .avatar {
-    max-width: 250px;
-    max-height: 250px;
-  }
-}

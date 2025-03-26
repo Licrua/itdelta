@@ -7,8 +7,9 @@
     "baseUrl": "src",
     "esModuleInterop": true,
     "paths": {
-      "@styles/*": ["styles/*"],
-      "@components/*": ["components/*"]
+      "@styles/*": ["styles/*"], 
+      "@assets/*": ["assets/*"], 
+
     }
   }
 }
