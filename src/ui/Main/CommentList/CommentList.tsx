@@ -12,12 +12,12 @@ type CommentListProps = {
 const CommentList = ({ comments }: CommentListProps) => {
   return (
     <div className={classes.commentList}>
-      <h3>All comments:</h3>
+      <h3>Все комментарии:</h3>
       <ul>
         {comments.length > 0 ? (
           comments.map((comment) => <li key={comment.id}>{comment.text}</li>)
         ) : (
-          <p>комментариев пока нет</p>
+          <p>Комментариев пока нет</p>
         )}
       </ul>
     </div>

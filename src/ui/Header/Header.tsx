@@ -30,11 +30,13 @@ const Header = ({ name }: HeaderProps) => {
           <h1>{name}</h1>
           <div className={classes.buttons}>
             <CustomButton
+              type="button"
               svg={<Message />}
               text={'Message'}
               onClick={() => openLink('mailto:example@mail.com')}
             />
             <CustomButton
+              type="button"
               svg={<Call />}
               text={'Call'}
               onClick={() => openLink('tel:89451455443')}
