@@ -1,4 +1,3 @@
-import React from 'react';
 import useFetchData from '../../../hooks/useFetchData.tsx';
 import CardItem from '../CardItem/CardItem.tsx';
 import classes from './PhotoList.module.scss';

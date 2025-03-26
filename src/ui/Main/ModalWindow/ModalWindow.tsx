@@ -25,7 +25,6 @@ type ModalWindowProps = {
 const ModalWindow = ({ id, show, handleClose }: ModalWindowProps) => {
   const url = `http://test-backend.itdelta.agency/api/image/${id}`;
   const { data, loading, error } = useFetchData<PhotoDetails>(url);
-  console.log('data', data);
 
   const [comment, setComment] = useState<string>('');
 
@@ -34,6 +33,7 @@ const ModalWindow = ({ id, show, handleClose }: ModalWindowProps) => {
   };
 
   const handleCommentSubmit = async (e: React.FormEvent) => {
+
     e.preventDefault();
     if (!comment) return;
 
