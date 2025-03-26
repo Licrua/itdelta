@@ -3,7 +3,7 @@ import Avatar from './Avatar/Avatar.tsx';
 import CustomButton from '../CustomButton/CustomButton.tsx';
 import { Message, Call } from '@assets/icons/svg.module.tsx';
 import avatar from '@assets/icons/avatar.jpg';
-const imageUrl = `${process.env.PUBLIC_URL}/images/banner_image.png`;
+import banner from '@assets/icons/banner_image.png';
 
 interface HeaderProps {
   name: string;
@@ -18,7 +18,7 @@ const Header = ({ name }: HeaderProps) => {
     <header className={classes.header}>
       <div
         style={{
-          backgroundImage: `url(${imageUrl})`,
+          backgroundImage: `url(${banner})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
         }}
