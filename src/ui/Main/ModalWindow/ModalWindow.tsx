@@ -1,9 +1,8 @@
-import React from 'react';
 import classes from './ModalWindow.module.scss';
-import CustomButton from '../../CustomButton/CustomButton.tsx';
-import useFetchData from '../../../hooks/useFetchData.tsx';
+import useFetchData from '@src/hooks/useFetchData.tsx';
 import CommentList from '../CommentList/CommentList.tsx';
-import Loader from '../../Loader/Loader.tsx';
+import Loader from '@src/ui/Loader/Loader.tsx';
+import CustomButton from '@src/ui/CustomButton/CustomButton.tsx';
 
 interface Comment {
   id: number;
@@ -37,10 +36,10 @@ const ModalWindow = ({ id, show, handleClose }: ModalWindowProps) => {
       <div className={classes.content} onClick={(e) => e.stopPropagation()}>
         <img src={data?.image} loading="lazy" alt={`img ${id}`} />
         <form action="">
-          <label htmlFor="comment">Comment</label>
+          <label htmlFor="comment">Комментарии</label>
           <textarea name="comment" id="comment"></textarea>
-          <p>Write a few sentences about the photo.</p>
-          <CustomButton className="violet" text="Save" onClick={handleClose} />
+          <strong>Введите комментарий</strong>
+          <CustomButton className="violet" text="Сохранить" onClick={handleClose} />
         </form>
         {data && <CommentList comments={data.comments} />}
       </div>

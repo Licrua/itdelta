@@ -1,7 +1,5 @@
 import classes from './CommentList.module.scss';
 
-
-
 type Comment = {
   id: number;
   text: string;

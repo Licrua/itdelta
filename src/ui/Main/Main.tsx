@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import classes from "./Main.module.scss";
-import PhotoList from "./PhotoList/PhotoList.tsx";
-import ModalWindow from "./ModalWindow/ModalWindow.tsx";
+import { useState } from 'react';
+import classes from './Main.module.scss';
+import PhotoList from './PhotoList/PhotoList.tsx';
+import ModalWindow from './ModalWindow/ModalWindow.tsx';
 
 const Main = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);

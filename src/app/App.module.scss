@@ -39,7 +39,7 @@ button:active {
 
 body {
   margin: 0;
-  width: 100vw;
+  min-width: 100vw;
   background-color: $color-white-background;
   color: $color-black;
   font-family: 'Inter', sans-serif;
